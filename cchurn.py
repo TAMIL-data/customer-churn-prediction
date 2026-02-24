@@ -5,10 +5,10 @@ import streamlit as st
 model = joblib.load("churn_model.pkl")
 scaler = joblib.load("scaler.pkl")
 features = joblib.load("features.pkl")
-st.title("Customer churn prediction ")
-st.write("enter customer details ")
+st.title("Customer churn prediction 📊")
+st.write("Enter customer details ")
 
-customer_id      = st.text_input("enter your id ")
+customer_id      = st.text_input("Enter your id ")
 contract         = st.selectbox("contract type",["Month-to-month", "One year", "Two year"])
 SeniorCitizen    = st.selectbox("SeniorCitizen",["YES","NO"])
 tenure           = st.number_input("Enter your tenure,(months)",min_value = 0)
