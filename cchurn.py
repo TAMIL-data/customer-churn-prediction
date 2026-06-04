@@ -1,12 +1,7 @@
 import pandas as pd
 import joblib
 import streamlit as st
-import traceback
-
-try:
-    model = joblib.load("churn_model.pkl")
-except Exception:
-    st.code(traceback.format_exc())
+model = joblib.load("churn_model.pkl")
 scaler = joblib.load("scaler.pkl")
 features = joblib.load("features.pkl")
 st.title("Customer churn prediction 📊")
